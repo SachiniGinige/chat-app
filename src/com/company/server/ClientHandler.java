@@ -47,38 +47,10 @@ public class ClientHandler implements Runnable{
                     break;
                 }
 
-
-
                 //send data to client
                 System.out.print("Server says: ");
                 serverInput=sc.nextLine();
                 outputStream.writeBytes(serverInput+"\n");
-
-
-                /*
-                //You can also use a scanner class to capture user input
-                                switch (inputData){
-                                    case "Hello from the Client.":
-                                        outputStream.writeBytes("Hello from the server...\n");
-                                        break;
-                                    case "How are you?":
-                                        outputStream.writeBytes("I'm fine, and you?\n");
-                                        break;
-                                    case "I'm fine.":
-                                        outputStream.writeBytes("Great!\n");
-                                        break;
-                                    case "Thank you.":
-                                        outputStream.writeBytes("You're welcome\n");
-                                        break;
-                                    case "Bye!":
-                                        outputStream.writeBytes("Bye!!\n");
-                                        break;
-                                    default:
-                                        outputStream.writeBytes("Sorry, I didn't get that.\n");
-                                }
-                */
-
-
             }
 
             this.client.close();
@@ -86,6 +58,5 @@ public class ClientHandler implements Runnable{
         catch (InterruptedException | IOException e) {
             e.printStackTrace();
         }
-
     }
 }
