@@ -17,10 +17,5 @@ public class ChatClient2 {
         client.sendMessage("Bye!");
 
         System.out.println("Client finished the execution...");
-
-
-
-
-
     }
 }

@@ -52,7 +52,6 @@ public class ClientHandler implements Runnable{
                 serverInput=sc.nextLine();
                 outputStream.writeBytes(serverInput+"\n");
             }
-
             this.client.close();
         }
         catch (InterruptedException | IOException e) {
